@@ -24,3 +24,43 @@ docker ps
 '''
 
 Stop application Ctrl + C or sudo docker-compose down (better option)
+
+
+Comandos Desenvolvimento:
+
+'''
+sudo docker-compose run web python manage.py migrate
+'''
+
+(django:admin123)
+
+'''
+sudo docker-compose run web python manage.py createsuperuser
+'''
+
+Não instalar dessa forma: sudo docker-compose run web pip3 install djangorestframework 
+adicionar ao requirements.txt e rodar:
+
+'''
+sudo docker-compose up --build
+'''
+
+'''
+sudo docker-compose run web python manage.py migrate sessions
+'''
+
+'''
+sudo docker-compose run web python manage.py migrate auth
+'''
+
+'''
+sudo docker-compose run web python manage.py startapp posts
+'''
+
+'''
+sudo docker-compose run web python manage.py makemigrations
+'''
+
+'''
+sudo docker-compose run web python manage.py migrate
+'''
